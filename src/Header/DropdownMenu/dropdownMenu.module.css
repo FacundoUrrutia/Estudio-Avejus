@@ -1,0 +1,36 @@
+.root {
+    position: fixed;
+    top: 92px;
+    left: 0;
+    width: 80%;
+    background-color: #fef5e7;
+    border: none;
+    transition: transform 0.3s ease;
+    transform: translateX(-110%);
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .open {
+    transform: translateX(0);
+  }
+  
+  .menuList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menuItem {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .menuItem:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+  }
+  

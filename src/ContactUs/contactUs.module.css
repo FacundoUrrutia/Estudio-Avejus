@@ -1,0 +1,226 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F1F3F6B3;
+    padding-bottom: 15%;
+    overflow: hidden;
+}
+
+.infoContainer {
+    max-height: max-content;
+    margin: auto;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #364850;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.imgAndText {
+    display: flex;
+    flex-direction: row;
+    min-width: 250px;
+    max-width: max-content;
+}
+
+.imgAndText img {
+    margin-right: 10px;
+}
+
+.icon {
+    min-width: 24px;
+}
+
+.text {
+    margin-left: 10px;
+    color: #253251;
+}
+
+.submitButton, .submitButtonDisable, .hideButton {
+    margin-top: 10px;
+    min-width: 100%;
+    min-height: 40px;
+    background-color: #ffbba8;
+    color: #ffffff;
+    letter-spacing: .5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    font-size: 18px;
+    margin-top: 30px;
+    z-index: 5;
+    cursor: pointer;
+    border: none;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px) rotate(3deg); }
+    50% { transform: translateX(3px) rotate(-3deg); }
+    75% { transform: translateX(-3px) rotate(3deg); }
+    100% { transform: translateX(0); }
+}
+
+.submitButtonDisable{
+    animation: vibrate 0.5s ease ;
+}
+
+.hideButton {
+    animation: blur-out-contract 1.8s linear both;
+}
+
+@keyframes blur-out-contract {
+    0% {
+        transform: scale(1);
+        filter: blur(0.01px);
+    }
+    100% {
+        transform: scale(0);
+        filter: blur(12px);
+        opacity: 0;
+    }
+}
+
+.iconButton {
+    margin-left: 20px;
+}
+
+.form { 
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: auto;
+    height: 100%;
+}
+
+.input { 
+    padding-left: 10px;
+    margin-top: 10px;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    box-shadow: 0px 0px 32px #0000001A;
+    font-weight: 600;
+}
+
+.inputArea {
+    padding: 10px;
+    margin-top: 10px;
+    padding-bottom: 140px;
+    border-radius: 8px;
+    border: none;
+    resize: none;
+    box-shadow: 0px 0px 32px #0000001A;
+    text-overflow: hidden;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.inputArea::placeholder {
+    color: #374653;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: initial;
+    height: 100%;
+    width: 100%;
+}
+
+::placeholder {
+    color: #374653;
+    font-size: 18px;
+    font-weight: 500;
+    text-overflow: hidden;
+    white-space: nowrap;
+}
+
+.input:focus, .inputArea:focus {
+    outline: none;
+}
+
+.emailSuccesText, .emailSuccesTextShow {
+    color: #364850;
+    position: relative;
+    padding: 10%;
+    margin-top: -20%;
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    transition: opacity 3.1s ease-in-out;
+    z-index: 1;
+    opacity: 0;
+}
+
+.emailSuccesTextShow {
+    opacity: 1;
+}
+
+.error {
+    max-width: 100%;
+    color: #CF010B;
+}
+
+@media(min-width: 1028px) {
+    .root {
+        max-height: 700px;
+        min-height: 700px;
+        opacity: 1;
+        padding: 5%;
+    }
+    
+    .title {
+        justify-content: left;
+        padding-left: 5%;
+        text-transform: uppercase;
+        font-size: 38px;
+    }
+
+    .icon {
+        width: 22px;
+    }
+
+    .form {
+        width: 50%;
+        padding: 10px;
+        top: 10px;
+    }
+
+    .input { 
+        height: 50px;
+        box-shadow: 0px 0px 32px #0000001A;
+    }
+    
+    .inputArea {
+        padding: 10px;
+        padding-bottom: 90px;
+    }
+
+    .inputArea::placeholder{
+        font-size: 16px;
+    }
+    
+    ::placeholder {
+        font-size: 16px;
+    }
+
+    .submitButton, .submitButtonDisable, .hideButton {
+        margin-top: 5px;
+        max-height: 50px;
+        font-size: 20px;
+        margin-top: 15px;
+    }
+
+    .emailSuccesText, .emailSuccesTextShow {
+        font-size: 18px;
+        padding-left: 5%;
+    }
+} 
+
+
