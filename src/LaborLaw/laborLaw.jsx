@@ -7,42 +7,42 @@ const LaborLaw = ({ handleLinkClick, isMobile }) => {
         <p>Derecho laboral</p>
         <div className={classes.cardContainer}>
             <div className={classes.card}>
-                <h3 className={classes.cardTitle}>Contrato laboral</h3>
+                <h3 className={classes.cardTitle}>Accidentes de trabajo (ART)</h3>
                 <div className={classes.cardContent}>
                     <p className={classes.cardText}>
-                        Nos especializamos en la revisión y redacción de contratos de trabajo, garantizando que cumplan con las normativas vigentes.
+                        Brindamos asesoría integral en casos de accidentes laborales, asegurando que se cumplan los derechos de los trabajadores y gestionando indemnizaciones.
                     </p>
                     <button 
                         className={classes.contactButton}
-                        onClick={() => handleLinkClick(isMobile ? 3500 : 2800)}
-                    >
-                    Contáctanos
-                    </button>
-                </div>
-            </div>
-            <div className={classes.card}>
-                <h3 className={classes.cardTitle}>Despidos y compensaciones</h3>
-                <div className={classes.cardContent}>
-                    <p className={classes.cardText}>
-                        Te asistimos en casos de despidos injustificados, ayudándote a obtener las compensaciones que mereces según la ley.
-                    </p>
-                    <button 
-                        className={classes.contactButton}
-                        onClick={() => handleLinkClick(isMobile ? 3500 : 2800)}
+                        onClick={() => handleLinkClick(isMobile ? 3700 : 2800)}
                     >
                         Contáctanos
                     </button>
                 </div>
             </div>
             <div className={classes.card}>
-                <h3 className={classes.cardTitle}>Seguridad en el trabajo</h3>
+                <h3 className={classes.cardTitle}>Despidos injustificados</h3>
                 <div className={classes.cardContent}>
                     <p className={classes.cardText}>
-                        Ofrecemos asesoramiento sobre la normativa de seguridad y salud laboral, protegiendo a empleados y empleadores.
+                        Te ayudamos a enfrentar despidos injustificados, buscando las compensaciones y derechos que te corresponden de acuerdo a la legislación laboral.
                     </p>
                     <button 
                         className={classes.contactButton}
-                        onClick={() => handleLinkClick(isMobile ? 3500 : 2800)}
+                        onClick={() => handleLinkClick(isMobile ? 3700 : 2800)}
+                    >
+                        Contáctanos
+                    </button>
+                </div>
+            </div>
+            <div className={classes.card}>
+                <h3 className={classes.cardTitle}>Trabajos no registrados (en negro)</h3>
+                <div className={classes.cardContent}>
+                    <p className={classes.cardText}>
+                        Asesoramos sobre derechos laborales para trabajadores no registrados, garantizando la protección y cumplimiento de las normativas de seguridad.
+                    </p>
+                    <button 
+                        className={classes.contactButton}
+                        onClick={() => handleLinkClick(isMobile ? 3700 : 2800)}
                     >
                         Contáctanos
                     </button>

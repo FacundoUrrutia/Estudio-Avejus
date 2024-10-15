@@ -25,27 +25,48 @@ const FamilyLaw = () => {
                 </div>
                 <div className={classes.sliderContainer}>
                     <Slider {...settings}>
-                    <div>
-                        <h3 className={classes.title}>Custodia de menores y divorcios</h3>
-                        <p className={classes.text}>
-                            Asesoramos en procesos de custodia, asegurando el bienestar de los menores y facilitando soluciones justas en divorcios.
-                            Nuestro enfoque prioriza siempre el bienestar de los niños y la resolución pacífica entre las partes.
-                        </p>
-                    </div>
-                    <div>
-                        <h3 className={classes.title}>Alimentos y regímenes de visitas</h3>
-                        <p className={classes.text}>
-                            Proveemos orientación legal sobre pensiones alimenticias y garantizamos el cumplimiento de los derechos de visita de los padres.
-                            Nos aseguramos de que todos los derechos sean protegidos y respetados.
-                        </p>
-                    </div>
-                    <div>
-                        <h3 className={classes.title}>Adopciones y tutela legal</h3>
-                        <p className={classes.text}>
-                            Apoyamos a familias en procesos de adopción, asegurando la legalidad y los mejores intereses del menor en cada caso.
-                            Brindamos todo el apoyo necesario para que el proceso sea ágil y sin complicaciones.
-                        </p>
-                    </div>
+                        <div className={classes.sliderItem}>
+                            <h3 className={classes.title}>Alimentos</h3>
+                            <p className={classes.text}>
+                                Brindamos asesoramiento en la gestión de pensiones alimenticias, asegurando el sustento de los menores
+                                y facilitando acuerdos justos en situaciones de separación.
+                            </p>
+                        </div>
+                        <div className={classes.sliderItem}>
+                            <h3 className={classes.title}>Régimen de comunicación (visitas)</h3>
+                            <p className={classes.text}>
+                                Orientamos en el establecimiento de derechos de visita, garantizando que la relación entre padres e hijos
+                                se mantenga saludable y equitativa.
+                            </p>
+                        </div>
+                        <div className={classes.sliderItem}>
+                            <h3 className={classes.title}>Cuidado personal (custodias)</h3>
+                            <p className={classes.text}>
+                                Acompañamos a las familias en procesos de custodia, priorizando el bienestar de los menores y promoviendo
+                                soluciones que respeten sus derechos.
+                            </p>
+                        </div>
+                        <div className={classes.sliderItem}>
+                            <h3 className={classes.title}>Filiación</h3>
+                            <p className={classes.text}>
+                                Asistimos en la determinación de vínculos familiares, asegurando la protección legal de los derechos de
+                                los involucrados en cada situación.
+                            </p>
+                        </div>
+                        <div className={classes.sliderItem}>
+                            <h3 className={classes.title}>Violencia Familiar</h3>
+                            <p className={classes.text}>
+                                Ofrecemos apoyo legal y psicológico para víctimas de violencia familiar, garantizando su seguridad
+                                y promoviendo la justicia en cada caso.
+                            </p>
+                        </div>
+                        <div className={classes.sliderItem}>
+                            <h3 className={classes.title}>Adopción</h3>
+                            <p className={classes.text}>
+                                Facilitamos el proceso de adopción, asegurando el cumplimiento de las normativas legales y protegiendo
+                                los intereses de los niños involucrados.
+                            </p>
+                        </div>
                     </Slider>
                 </div>
             </div>

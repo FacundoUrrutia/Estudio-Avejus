@@ -9,9 +9,10 @@ const WhoWeAre = ({ handleLinkClick , isMobile}) => {
             <div className={classes.textContainer}>
                 <h3>QUIÉNES SOMOS</h3>
                 <p>
-                    Forjamos relaciones sólidas con nuestros clientes a través de un
-                    equipo de abogados especializados en diversas áreas del derecho,
-                    brindando asesoramiento integral para asegurar su satisfacción.
+                Forjamos relaciones sólidas con nuestros clientes mediante un acompañamiento personalizado en cada etapa del proceso,
+                 respaldado por un equipo de abogados especializados en diversas áreas del derecho.
+                  Nuestra prioridad es brindar confianza y seguridad a través de un trato cercano y exclusivo,
+                   ofreciendo un asesoramiento integral orientado a alcanzar la solución más favorable para cada asunto jurídico.
                 </p>
                 <button 
                     className={classes.contactButton} 

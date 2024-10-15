@@ -1,5 +1,5 @@
 .root {
-    min-height: 600px;
+    min-height: 800px;
     height: auto;
     background-color: #f0f0f0;
     display: flex;
@@ -79,7 +79,6 @@
     }
 
     .root {
-        padding: 50px;
         padding-bottom: 0;
     }
 

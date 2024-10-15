@@ -71,7 +71,7 @@ const ContactUs = () => {
                     <div className={classes.info}>
                          <div className={classes.imgAndText}>
                               <img src={iconCall} width={20} alt="icon phone"/>
-                              <p>1164870004</p>
+                              <p>1133381119</p>
                          </div>
                          <div className={classes.imgAndText}>
                               <img src={iconEmail} width={20} alt="icon mail"/>

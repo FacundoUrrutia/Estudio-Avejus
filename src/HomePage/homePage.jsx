@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Header/header";
 import WhoWeAre from "../WhoWeAre/whoWeAre";
-import WorkAccidents from "../WorkAccidents/workAccidents";
 import FamilyLaw from "../FamilyLaw/familyLaw";
 import LaborLaw from "../LaborLaw/laborLaw";
 import CivilAndCommercialLaw from "../CivilAndCommercialLaw/civilAndCommercialLaw";
 import ContactUs from "../ContactUs/contactUs";
 import Footer from "../Footer/footer";
 import classes from './homePage.module.css';
+import CriminalLaw from "../CriminalLaw/criminalLaw";
 
 const HomePage = () => {
     const [width, setWidth] = useState(window.innerWidth);  
 
     const itemsHeader = [
-        { name: "Quienes somos", top: 0 , topMobile: 0},
-        { name: "Accidentes de trabajo", top: 400 , topMobile: 600},
-        { name: "Derecho de familia", top: 1000 , topMobile: 1100},
-        { name: "Derecho laboral", top: 1600 , topMobile: 1950},
-        { name: "Derecho civil y comercial", top: 1900 , topMobile: 2650},
-        { name: "Contacto", top: 2800 , topMobile: 3300},
+        { name: "Quienes somos", top: 40 , topMobile: 20},
+        { name: "Derecho de familia", top: 650 , topMobile: 1000},
+        { name: "Derecho laboral", top: 1250 , topMobile: 1700},
+        { name: "Derecho civil y comercial", top: 1800 , topMobile: 2350},
+        { name: "Derecho penal", top: 2300 , topMobile: 2900},
+        { name: "Contacto", top: 2900 , topMobile: 3600},
     ];
 
     const handleResize = () => {
@@ -47,10 +47,10 @@ const HomePage = () => {
             itemsHeader={itemsHeader} 
         />
         <WhoWeAre handleLinkClick={handleLinkClick} isMobile={isMobile}/>
-        <WorkAccidents />
         <FamilyLaw />
         <LaborLaw handleLinkClick={handleLinkClick} isMobile={isMobile}/>
         <CivilAndCommercialLaw />
+        <CriminalLaw/>
         <ContactUs />
         <Footer />
         </div>

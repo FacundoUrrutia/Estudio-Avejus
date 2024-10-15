@@ -1,0 +1,85 @@
+.root {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .textContainer {
+    flex: 1;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #b2443a;
+  }
+  
+  .description {
+    font-size: 20px;
+    line-height: 1.5;
+    color: #333;
+    max-width: 90%;
+  }
+  
+  .buttonContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .button {
+    display: flex;
+    align-items: center;
+    background-color: rgb(18, 140, 126);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .button:hover {
+    color: #fff;
+  }
+  
+  .icon {
+    margin-right: 8px; 
+    width: 20px;
+    height: 20px;
+  }
+  
+  @media (max-width: 900px) {
+      .root {
+          flex-direction: column;
+          align-items: center;
+          margin: 20px 0;
+      }
+  
+      .container {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+      }
+  
+      .description {
+          margin: auto;
+      }
+  
+      .buttonContainer {
+          margin-top: 20px;
+      }
+  }
+  
