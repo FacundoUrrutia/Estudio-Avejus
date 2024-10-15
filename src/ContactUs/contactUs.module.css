@@ -26,6 +26,7 @@
     flex-direction: row;
     min-width: 250px;
     max-width: max-content;
+    color: #616161;
 }
 
 .imgAndText img {
