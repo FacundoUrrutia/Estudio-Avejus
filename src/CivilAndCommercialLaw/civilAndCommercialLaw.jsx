@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import classes from "./civilAndCommercialLaw.module.css";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
+import backgroundImage from '../assets/backgroundCivil3.jpeg';
 
 const CivilAndCommercialLaw = () => {
     const settings = {
@@ -25,7 +26,7 @@ const CivilAndCommercialLaw = () => {
     };
 
     return (
-        <div className={classes.root}>
+        <div className={classes.root} style={{ backgroundImage: `url(${backgroundImage})` }}>
             <p className={classes.title}>Derecho civil y comercial</p>
             <div className={classes.sliderContainer}>
                 <Slider {...settings}>
