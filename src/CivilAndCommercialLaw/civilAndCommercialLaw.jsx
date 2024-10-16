@@ -28,40 +28,40 @@ const CivilAndCommercialLaw = () => {
         <div className={classes.root}>
             <p className={classes.title}>Derecho civil y comercial</p>
             <div className={classes.sliderContainer}>
-            <Slider {...settings}>
-                <div className={classes.sliderItem}>
-                    <div className={classes.sliderItemContainer}>
-                        <h3>Sucesiones</h3>
-                        <p className={classes.text}>
-                            Brindamos apoyo integral en la planificación y distribución del patrimonio familiar, garantizando la seguridad jurídica.
-                        </p>
+                <Slider {...settings}>
+                    <div className={classes.sliderItem}>
+                        <div className={classes.sliderItemContainer}>
+                            <h3>Sucesiones</h3>
+                            <p className={classes.text}>
+                                Te asistimos en el proceso sucesorio para garantizar una transmisión ordenada y ágil de los bienes, evitando conflictos entre los herederos. Acompañamos desde la apertura de la sucesión hasta la partición final, asegurando el cumplimiento de las disposiciones legales y testamentarias.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className={classes.sliderItem}>
-                    <div className={classes.sliderItemContainer}>
-                        <h3>Daños y perjuicios</h3>
-                        <p className={classes.text}>
-                            Asesoramos en la presentación de reclamos por daños y perjuicios para asegurar la reparación justa y oportuna.
-                        </p>
+                    <div className={classes.sliderItem}>
+                        <div className={classes.sliderItemContainer}>
+                            <h3>Daños y perjuicios</h3>
+                            <p className={classes.text}>
+                                Te ayudamos a reclamar la reparación integral de daños materiales y morales sufridos por acciones u omisiones de terceros. Gestionamos negociaciones y demandas judiciales para que obtengas la indemnización justa por los perjuicios ocasionados.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className={classes.sliderItem}>
-                    <div className={classes.sliderItemContainer}>
-                        <h3>Reclamos de terceros / Accidentes de tránsito</h3>
-                        <p className={classes.text}>
-                            Defendemos tus derechos frente a terceros en casos de accidentes de tránsito, buscando la compensación adecuada.
-                        </p>
+                    <div className={classes.sliderItem}>
+                        <div className={classes.sliderItemContainer}>
+                            <h3>Reclamos de terceros / Accidentes de tránsito</h3>
+                            <p className={classes.text}>
+                                Asesoramos y representamos en reclamos derivados de accidentes de tránsito, tanto para conductores como para terceros afectados. Nos encargamos de gestionar indemnizaciones por daños a personas y bienes, negociando con compañías aseguradoras o iniciando acciones legales cuando sea necesario.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div className={classes.sliderItem}>
-                    <div className={classes.sliderItemContainer}>
-                        <h3>Usucapión (prescripción adquisitiva)</h3>
-                        <p className={classes.text}>
-                            Te asesoramos en procesos de usucapión, ayudando a regularizar la propiedad de inmuebles mediante la prescripción adquisitiva.
-                        </p>
+                    <div className={classes.sliderItem}>
+                        <div className={classes.sliderItemContainer}>
+                            <h3>Usucapión (prescripción adquisitiva)</h3>
+                            <p className={classes.text}>
+                                Te asesoramos en los trámites de usucapión para que puedas regularizar la posesión de inmuebles adquiridos por el uso prolongado en el tiempo. Acompañamos desde la presentación de pruebas hasta la obtención de la sentencia judicial que reconozca tus derechos como propietario.
+                            </p>
+                        </div>
                     </div>
-                </div>
-            </Slider>
+                </Slider>
             </div>
         </div>
     );

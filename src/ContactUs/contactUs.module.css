@@ -132,6 +132,7 @@
     text-align: initial;
     height: 100%;
     width: 100%;
+    font-family: 'Roboto';
 }
 
 ::placeholder {
@@ -140,6 +141,7 @@
     font-weight: 500;
     text-overflow: hidden;
     white-space: nowrap;
+    font-family: 'Roboto';
 }
 
 .input:focus, .inputArea:focus {

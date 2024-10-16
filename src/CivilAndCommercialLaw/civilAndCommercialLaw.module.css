@@ -5,6 +5,10 @@
   justify-content: center;
   align-items: center;
   padding: 50px 0;
+  background-image: url('src/assets/backgroundCivil3.jpeg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -43,6 +47,11 @@
   transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
   padding: 5% 0;
   color: #616161;
+  border-radius: 12px;
+}
+
+.sliderItemContainer h3 {
+  font-size: 20px;
 }
 
 .sliderItemContainer:hover {
@@ -81,6 +90,7 @@
 @media (max-width: 960px) {
     .root {
       height: auto;
+      background-size: cover; /* Para cubrir todo el contenedor */
     }
 
     .sliderItem {
@@ -94,7 +104,7 @@
 
     .text {
       font-size: 18px;
-      max-width: 100%;
+      max-width: 90%;
     }
 
     .title {
@@ -104,13 +114,13 @@
     }
 
     .sliderItemContainer {
-      min-height: 250px;
+      min-height: 400px;
       width: 100%;
       margin: auto;
       padding: 5% 0;
     }
 
     .sliderItemContainer:hover {
-      transform: scale(1.05); /* Zoom al hacer hover */
+      transform: scale(1.05);
     }
 }

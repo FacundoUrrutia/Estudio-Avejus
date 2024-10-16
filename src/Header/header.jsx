@@ -9,7 +9,7 @@ const Header = ({ isMobile, handleLinkClick, itemsHeader }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpenClick = () => {
-    setIsOpen(!isOpen); // Alterna el estado de isOpen
+    setIsOpen(!isOpen);
   }
 
   console.log(isMobile)
