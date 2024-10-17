@@ -18,7 +18,7 @@ const WhoWeAre = ({ handleLinkClick , isMobile}) => {
                     className={classes.contactButton} 
                     onClick={() => handleLinkClick(isMobile ? 3300 : 2800)}
                 >
-                    Contactarnos
+                    Contactanos
                 </button>
             </div>
             <div className={classes.imageContainer}>

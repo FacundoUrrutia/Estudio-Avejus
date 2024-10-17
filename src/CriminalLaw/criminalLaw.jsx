@@ -22,7 +22,7 @@ const CriminalLaw = () => {
         </div>
         <div className={classes.buttonContainer}>
           <a
-            href="https://wa.me/1133381119"
+            href="https://wa.me/+5491133381119"
             target="_blank"
             className={classes.button}
           >

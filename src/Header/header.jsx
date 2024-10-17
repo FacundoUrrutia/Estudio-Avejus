@@ -12,8 +12,6 @@ const Header = ({ isMobile, handleLinkClick, itemsHeader }) => {
     setIsOpen(!isOpen);
   }
 
-  console.log(isMobile)
-
   return (
     <>
         <div className={classes.root}>
@@ -36,7 +34,7 @@ const Header = ({ isMobile, handleLinkClick, itemsHeader }) => {
                     className={classes.imgLogo}
                     />
                 </button>
-            <a href="https://wa.me/1133381119" target="_blank" className={classes.wsp}> 
+            <a href="https://wa.me/+5491133381119" target="_blank" className={classes.wsp}> 
                 <img src={iconWsp} alt="icon wsp" width={40} height={40}/>
             </a>
             <ul className={classes.navList}>

@@ -7,24 +7,63 @@ import iconHome from "../assets/MonoIconsHome.svg";
 
 const ContactUs = () => {
   const [emailSucces, setEmailSucces] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [nombre, setNombre] = useState("");
   const [correo, setCorreo] = useState("");
   const [telefono, setTelefono] = useState("");
   const [mensaje, setMensaje] = useState("");
   const [genericError, setGenericError] = useState("");
+  const [nombreError, setNombreError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [telefonoError, setTelefonoError] = useState("");
 
   const form = useRef();
 
   const genericErrorText = "Por favor, completa todos los campos.";
 
+  // Función para validar el nombre
+  const validateNombre = (value) => /^[A-Za-z\s]+$/.test(value);
+
+  // Función para validar el email
+  const validateEmail = (value) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(value);
+  };
+
+  // Función para validar el teléfono
+  const validateTelefono = (value) => /^\d+$/.test(value);
+
   const sendEmail = (e) => {
     e.preventDefault();
     setGenericError("");
+    setNombreError("");
+    setEmailError("");
+    setTelefonoError("");
+
+    // Validar nombre
+    if (!validateNombre(nombre)) {
+      setNombreError("El nombre solo debe contener letras.");
+      return;
+    }
+
+    // Validar email
+    if (!validateEmail(correo)) {
+      setEmailError("Ingresa un correo electrónico válido.");
+      return;
+    }
+
+    // Validar teléfono
+    if (!validateTelefono(telefono)) {
+      setTelefonoError("El teléfono solo debe contener números.");
+      return;
+    }
 
     if (!nombre || !correo || !telefono || !mensaje) {
       setGenericError(genericErrorText);
       return;
     }
+
+    setIsSending(true); // Cambiar el estado a "enviando"
 
     emailjs
       .sendForm(
@@ -37,30 +76,20 @@ const ContactUs = () => {
         (result) => {
           console.log("Email enviado con éxito:", result.text);
           setEmailSucces(true);
+          setIsSending(false);
+          setNombre(""); // Limpiar inputs
+          setCorreo("");
+          setTelefono("");
+          setMensaje("");
         },
         (error) => {
           console.error("Error al enviar el email:", error.text);
           setGenericError(
             "Hubo un problema al enviar el mensaje. Intenta de nuevo más tarde."
           );
+          setIsSending(false); // Restablecer el estado si ocurre un error
         }
       );
-  };
-
-  const handleNombreChange = (e) => {
-    setNombre(e.target.value);
-  };
-
-  const handleCorreoChange = (e) => {
-    setCorreo(e.target.value);
-  };
-
-  const handleTelefonoChange = (e) => {
-    setTelefono(e.target.value);
-  };
-
-  const handleMensajeChange = (e) => {
-    setMensaje(e.target.value);
   };
 
   return (
@@ -89,40 +118,56 @@ const ContactUs = () => {
           placeholder="Nombre"
           className={classes.input}
           value={nombre}
-          onChange={handleNombreChange}
+          onChange={(e) => setNombre(e.target.value)}
         />
+        {nombreError && <p className={classes.error}>{nombreError}</p>}
         <input
           name="user_email"
           type="email"
           placeholder="Email"
           className={classes.input}
           value={correo}
-          onChange={handleCorreoChange}
+          onChange={(e) => setCorreo(e.target.value)}
         />
+        {emailError && <p className={classes.error}>{emailError}</p>}
         <input
           name="user_telephone"
           type="text"
           placeholder="Teléfono"
           className={classes.input}
           value={telefono}
-          onChange={handleTelefonoChange}
+          onChange={(e) => setTelefono(e.target.value)}
         />
+        {telefonoError && <p className={classes.error}>{telefonoError}</p>}
         <textarea
           name="message"
           placeholder="Mensaje"
           className={classes.inputArea}
           value={mensaje}
-          onChange={handleMensajeChange}
+          onChange={(e) => setMensaje(e.target.value)}
         />
         {genericError && <p className={classes.error}>{genericError}</p>}
-        <button
-          type="submit"
-          className={emailSucces ? classes.hideButton : classes.submitButton}
-        >
-          {emailSucces ? "Enviando..." : "Enviar Mensaje"}
-        </button>
+
+        {/* Mostrar el botón dependiendo del estado de envío */}
+        {!emailSucces && (
+          <button
+            type="submit"
+            className={classes.submitButton}
+            disabled={isSending} // Deshabilitar mientras se envía
+          >
+            {isSending ? "Enviando..." : "Enviar Mensaje"}
+          </button>
+        )}
+
+        {/* Mensaje de éxito después del envío */}
         {emailSucces && (
-          <p className={classes.emailSuccesText}>¡Gracias por tu mensaje!</p>
+          <p
+            className={`${classes.emailSuccesText} ${
+              emailSucces ? classes.emailSuccesTextShow : ""
+            }`}
+          >
+            ¡Gracias por tu mensaje!
+          </p>
         )}
       </form>
     </div>
