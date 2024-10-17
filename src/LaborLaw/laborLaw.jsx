@@ -50,7 +50,6 @@ const LaborLaw = ({ handleLinkClick, isMobile }) => {
     <div className={classes.root}>
       <p className={classes.title}>Derecho Laboral</p>
       <div className={classes.contentWrapper}>
-        {/* Slider de los ítems */}
         <div className={classes.sliderContainer}>
           <Slider {...sliderSettings} className={classes.slider}>
             {items.map((item, index) => (
@@ -60,19 +59,16 @@ const LaborLaw = ({ handleLinkClick, isMobile }) => {
               </div>
             ))}
           </Slider>
-          {/* Botón de contacto */}
           <div className={classes.contactButtonContainer}>
             <button
               className={classes.contactButton}
-              onClick={() => handleLinkClick(isMobile ? 3700 : 3000)}
+              onClick={() => handleLinkClick(isMobile ? 3700 : 3100)}
             >
               Contáctanos
               <img src={iconButton} alt="icon button" width={20} />
             </button>
           </div>
         </div>
-
-        {/* Contenedor de tarjetas en mobile */}
         <div className={classes.cardContainerMobile}>
           {items.map((item, index) => (
             <div className={classes.card} key={index}>
@@ -81,8 +77,6 @@ const LaborLaw = ({ handleLinkClick, isMobile }) => {
             </div>
           ))}
         </div>
-
-        {/* Slider de las imágenes */}
         <div className={classes.sliderContainerImages}>
           <Slider {...sliderSettingsImages}>
             {[img1, img2].map((img, index) => (
